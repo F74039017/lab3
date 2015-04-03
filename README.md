@@ -38,21 +38,21 @@ Empirical results
 	
 Explaination
 --------------------------------------------
-When size=1000000, it is hard to wait for such long time.
+When size=1000000, it is hard to wait for such long time.<br/>
 SSH automatically throw the message "Write failed: Broken pipe" and disconnect.
 
-std::sort is used quick sort which is a divide and conquer algorithm.
+std::sort is used quick sort which is a divide and conquer algorithm.<br/>
 Hence, the complexity is O(n log(n)).
 
 Observe the following insertion sort code.
 ```c++
 for(int next=1; next<v.size(); next++)
 {
-	insert = v.at(next); // get moved item 
-	moveItem = next; // index of moved item
-	while((moveItem>0) && (v.at(moveItem-1) > insert)) // comare cur and moved one
+	insert = v.at(next); 
+	moveItem = next;
+	while((moveItem>0) && (v.at(moveItem-1) > insert))
 	{
-		v.at(moveItem) = v.at(moveItem-1); // move up
+		v.at(moveItem) = v.at(moveItem-1);
 		moveItem--;
 	}
 	v.at(moveItem) = insert;
@@ -60,7 +60,7 @@ for(int next=1; next<v.size(); next++)
 ```
 A while loop is in a for loop; therefore the complexity is O(n^2).
 
-By the empirical results.
+By the empirical results.<br />
 Compare the expected time with the result to confirm the complexity is right.
 
 	sort():				size 100000 v.s. 1000000
@@ -71,5 +71,5 @@ Compare the expected time with the result to confirm the complexity is right.
 	Expected:			1.31*(100000/10000)^2 = 131
 	result:				127.99	
 	
-The expected time is close to result one.
+The expected time is close to result one.<br/>
 The complexity is confirmed to be right!
