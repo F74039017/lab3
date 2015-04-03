@@ -12,7 +12,7 @@ void insertion_sort(vector<int> & v)
 	{
 		insert = v.at(next); // get moved item 
 		moveItem = next; // index of moved item
-		while((moveItem>0) && (v.at(moveItem-1) > insert)) // comare cur and moved one
+		while((moveItem>0) && (v.at(moveItem-1) > insert)) // compare cur and moved one
 		{
 			v.at(moveItem) = v.at(moveItem-1); // move up
 			moveItem--;
