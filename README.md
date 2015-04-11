@@ -64,7 +64,7 @@ By the empirical results.<br />
 Compare the expected time with the result to confirm the complexity is right.
 
 	sort():				size 100000 v.s. 1000000
-	Expected:			0.05*(1000000/100000)*(log(1000000)*log(100000)) = 0.6
+	Expected:			0.05*(1000000/100000)*(log(1000000)/log(100000)) = 0.6
 	result:				0.56
 	
 	insertion_sort:		size 10000 v.s. 100000
